@@ -80,7 +80,7 @@ export default function Contact() {
                 : "bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700"
             }`}
           >
-            Let's Connect
+            Let&apos;s Connect
           </h2>
           <p
             className={`text-lg md:text-xl max-w-2xl mx-auto leading-relaxed px-4 ${
