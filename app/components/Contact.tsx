@@ -87,8 +87,8 @@ export default function Contact() {
               isDarkMode ? "text-gray-300" : "text-slate-600"
             }`}
           >
-            Ready to grow your social media presence? Let's discuss how we can
-            elevate your brand together.
+            Ready to grow your social media presence? Let&apos;s discuss how we
+            can elevate your brand together.
           </p>
         </div>
 
@@ -112,8 +112,8 @@ export default function Contact() {
                   isDarkMode ? "text-gray-300" : "text-slate-600"
                 }`}
               >
-                I'm passionate about helping brands and businesses build
-                meaningful connections with their audience. Let's create
+                I&apos;m passionate about helping brands and businesses build
+                meaningful connections with their audience. Let&apos;s create
                 something amazing together!
               </p>
             </div>

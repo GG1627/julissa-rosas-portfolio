@@ -2,40 +2,21 @@
 
 import { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
+import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [currentText, setCurrentText] = useState(0);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const { isDarkMode, toggleDarkMode } = useTheme();
-
-  const texts = [
-    "Social Media Manager",
-    "Content Creator",
-    "Brand Strategist",
-    "Digital Storyteller",
-  ];
 
   useEffect(() => {
     setIsLoaded(true);
-
-    const interval = setInterval(() => {
-      setCurrentText((prev) => (prev + 1) % texts.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
   }, []);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-  };
 
   return (
     <section
       className={`relative h-screen flex flex-col overflow-hidden transition-colors duration-300 ${
         isDarkMode ? "bg-gray-900" : "bg-white"
       }`}
-      onMouseMove={handleMouseMove}
     >
       {/* Enhanced background with animated elements */}
       <div className="absolute inset-0">
@@ -201,22 +182,33 @@ export default function Hero() {
                 ></div>
               </div>
 
-              {/* Enhanced animated subtitle */}
+              {/* Enhanced animated subtitle with TypeAnimation */}
               <div
                 className={`mb-6 md:mb-8 h-6 md:h-8 flex items-center justify-center lg:justify-start ${
                   isLoaded ? "animate-fade-in-left" : "opacity-0"
                 }`}
                 style={{ animationDelay: "0.3s" }}
               >
-                <span
+                <TypeAnimation
                   className={`text-lg md:text-xl font-light bg-clip-text text-transparent ${
                     isDarkMode
                       ? "bg-gradient-to-r from-gray-400 to-gray-500"
                       : "bg-gradient-to-r from-slate-500 to-slate-600"
                   }`}
-                >
-                  {texts[currentText]}
-                </span>
+                  wrapper="span"
+                  cursor={true}
+                  repeat={Infinity}
+                  sequence={[
+                    "Social Media Manager",
+                    2000,
+                    "Content Creator",
+                    2000,
+                    "Brand Strategist",
+                    2000,
+                    "Digital Storyteller",
+                    2000,
+                  ]}
+                />
                 <span
                   className={`text-lg md:text-xl ml-2 animate-pulse ${
                     isDarkMode ? "text-gray-500" : "text-slate-400"
@@ -241,7 +233,7 @@ export default function Hero() {
                   }`}
                 >
                   {" "}
-                  Let's build something meaningful together.
+                  Let&apos;s build something meaningful together.
                 </span>
               </p>
 
@@ -275,7 +267,7 @@ export default function Hero() {
                       : "border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400"
                   }`}
                 >
-                  <span className="relative z-10">Let's Connect</span>
+                  <span className="relative z-10">Let&apos;s Connect</span>
                   <div
                     className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
                       isDarkMode ? "bg-gray-800" : "bg-slate-50"

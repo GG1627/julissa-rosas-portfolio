@@ -43,7 +43,7 @@ export default function About() {
     }, 4000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [skills.length]);
 
   return (
     <section
@@ -187,9 +187,9 @@ export default function About() {
                   isDarkMode ? "text-gray-300" : "text-slate-600"
                 }`}
               >
-                "Authenticity is the key to meaningful connections. I create
-                content that doesn't just look good—it feels real, resonates
-                with audiences, and drives results."
+                &ldquo;Authenticity is the key to meaningful connections. I
+                create content that doesn&apos;t just look good—it feels real,
+                resonates with audiences, and drives results.&rdquo;
               </p>
             </div>
           </div>
