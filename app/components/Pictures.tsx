@@ -5,6 +5,7 @@ import { useTheme } from "../context/ThemeContext";
 
 export default function Picture() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const { isDarkMode } = useTheme();
 
   // Array of image data with titles and descriptions
@@ -95,97 +96,131 @@ export default function Picture() {
     setIsLoaded(true);
   }, []);
 
+  const openImage = (index: number) => {
+    setSelectedImage(index);
+  };
+
+  const closeImage = () => {
+    setSelectedImage(null);
+  };
+
   return (
-    <section
-      id="picture"
-      className={`min-h-screen transition-colors duration-300 py-12 md:py-20 relative overflow-hidden ${
-        isDarkMode ? "bg-gray-900" : "bg-[#ffeaf4]"
-      }`}
-    >
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className={`absolute top-20 left-20 w-16 md:w-32 h-16 md:h-32 rounded-full blur-3xl animate-float ${
-            isDarkMode ? "bg-gray-400" : "bg-slate-400"
-          }`}
-        ></div>
-        <div
-          className={`absolute bottom-20 right-20 w-12 md:w-24 h-12 md:h-24 rounded-full blur-2xl animate-float ${
-            isDarkMode ? "bg-gray-400" : "bg-slate-400"
-          }`}
-          style={{ animationDelay: "1s" }}
-        ></div>
-        <div
-          className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 md:w-40 h-20 md:h-40 rounded-full blur-3xl animate-float ${
-            isDarkMode ? "bg-gray-400" : "bg-slate-400"
-          }`}
-          style={{ animationDelay: "2s" }}
-        ></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
-        {/* Header */}
-        <div
-          className={`text-center mb-12 md:mb-16 ${
-            isLoaded ? "animate-fade-in-up" : "opacity-0"
-          }`}
-        >
-          <h2
-            className={`text-4xl md:text-5xl lg:text-7xl font-bold bg-clip-text text-transparent mb-4 md:mb-6 tracking-tight ${
-              isDarkMode
-                ? "bg-gradient-to-r from-white via-gray-100 to-gray-300"
-                : "bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700"
+    <>
+      <section
+        id="picture"
+        className={`min-h-screen transition-colors duration-300 py-12 md:py-20 relative overflow-hidden ${
+          isDarkMode ? "bg-gray-900" : "bg-[#ffeaf4]"
+        }`}
+      >
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className={`absolute top-20 left-20 w-16 md:w-32 h-16 md:h-32 rounded-full blur-3xl animate-float ${
+              isDarkMode ? "bg-gray-400" : "bg-slate-400"
             }`}
-          >
-            Pictures
-          </h2>
-          <p
-            className={`text-lg md:text-xl max-w-2xl mx-auto leading-relaxed px-4 ${
-              isDarkMode ? "text-gray-300" : "text-slate-600"
+          ></div>
+          <div
+            className={`absolute bottom-20 right-20 w-12 md:w-24 h-12 md:h-24 rounded-full blur-2xl animate-float ${
+              isDarkMode ? "bg-gray-400" : "bg-slate-400"
             }`}
-          >
-            A creative collection of moments captured through my lens.
-          </p>
+            style={{ animationDelay: "1s" }}
+          ></div>
+          <div
+            className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 md:w-40 h-20 md:h-40 rounded-full blur-3xl animate-float ${
+              isDarkMode ? "bg-gray-400" : "bg-slate-400"
+            }`}
+            style={{ animationDelay: "2s" }}
+          ></div>
         </div>
 
-        {/* Creative Image Grid - Masonry Style */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 md:gap-6 space-y-4 md:space-y-6">
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className={`break-inside-avoid group relative ${
-                isLoaded ? "animate-scale-in" : "opacity-0"
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          {/* Header */}
+          <div
+            className={`text-center mb-12 md:mb-16 ${
+              isLoaded ? "animate-fade-in-up" : "opacity-0"
+            }`}
+          >
+            <h2
+              className={`text-4xl md:text-5xl lg:text-7xl font-bold bg-clip-text text-transparent mb-4 md:mb-6 tracking-tight ${
+                isDarkMode
+                  ? "bg-gradient-to-r from-white via-gray-100 to-gray-300"
+                  : "bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700"
               }`}
-              style={{ animationDelay: `${0.1 + index * 0.05}s` }}
             >
-              {/* Image Container */}
+              Pictures
+            </h2>
+            <p
+              className={`text-lg md:text-xl max-w-2xl mx-auto leading-relaxed px-4 ${
+                isDarkMode ? "text-gray-300" : "text-slate-600"
+              }`}
+            >
+              A creative collection of moments captured through my lens.
+            </p>
+          </div>
+
+          {/* Creative Image Grid - Masonry Style */}
+          <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 md:gap-6 space-y-4 md:space-y-6">
+            {images.map((image, index) => (
               <div
-                className={`relative rounded-xl md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover-lift overflow-hidden ${
-                  isDarkMode ? "bg-gray-800" : "bg-white"
+                key={index}
+                className={`break-inside-avoid group relative cursor-pointer ${
+                  isLoaded ? "animate-scale-in" : "opacity-0"
                 }`}
+                style={{ animationDelay: `${0.1 + index * 0.05}s` }}
+                onClick={() => openImage(index)}
               >
-                {/* Image - No cropping, true size */}
-                <img
-                  src={image.src}
-                  alt={image.title}
-                  className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-
-                {/* Creative Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-
-                {/* Floating accent elements */}
-                <div className="absolute top-2 md:top-4 right-2 md:right-4 w-1.5 md:w-2 h-1.5 md:h-2 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
+                {/* Image Container */}
                 <div
-                  className="absolute bottom-2 md:bottom-4 left-2 md:left-4 w-1 md:w-1.5 h-1 md:h-1.5 bg-white/40 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"
-                  style={{ animationDelay: "0.5s" }}
-                ></div>
+                  className={`relative rounded-xl md:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover-lift overflow-hidden ${
+                    isDarkMode ? "bg-gray-800" : "bg-white"
+                  }`}
+                >
+                  {/* Image - No cropping, true size */}
+                  <img
+                    src={image.src}
+                    alt={image.title}
+                    className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                  />
+
+                  {/* Creative Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+
+                  {/* Floating accent elements */}
+                  <div className="absolute top-2 md:top-4 right-2 md:right-4 w-1.5 md:w-2 h-1.5 md:h-2 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
+                  <div
+                    className="absolute bottom-2 md:bottom-4 left-2 md:left-4 w-1 md:w-1.5 h-1 md:h-1.5 bg-white/40 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"
+                    style={{ animationDelay: "0.5s" }}
+                  ></div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Modal/Lightbox */}
+      {selectedImage !== null && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={closeImage}
+        >
+          <div className="relative w-full h-full flex items-center justify-center">
+            <img
+              src={images[selectedImage].src}
+              alt={images[selectedImage].title}
+              className="max-w-[90vw] max-h-[90vh] object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              onClick={closeImage}
+              className="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 transition-colors duration-200"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
