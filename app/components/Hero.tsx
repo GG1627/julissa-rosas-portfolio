@@ -306,7 +306,7 @@ export default function Hero() {
 
       {/* Enhanced scroll indicator */}
       <div
-        className={`absolute bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 ${
+        className={`absolute bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 hidden md:block ${
           isLoaded ? "animate-fade-in-up" : "opacity-0"
         }`}
         style={{ animationDelay: "1.1s" }}
