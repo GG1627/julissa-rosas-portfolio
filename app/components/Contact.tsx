@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -11,26 +12,15 @@ export default function Contact() {
     {
       icon: "📧",
       label: "Email",
-      value: "julissa@example.com",
-      link: "mailto:julissa@example.com",
+      value: "julissarosas347@gmail.com",
+      link: "mailto:julissarosas347@example.com",
     },
+
     {
-      icon: "📱",
-      label: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
-    },
-    {
-      icon: "📸",
-      label: "Instagram",
-      value: "@julissa.rosas",
-      link: "https://instagram.com/julissa.rosas",
-    },
-    {
-      icon: "🐦",
-      label: "Twitter",
-      value: "@julissa_rosas",
-      link: "https://twitter.com/julissa_rosas",
+      icon: <FaLinkedin className="text-blue-600" />,
+      label: "LinkedIn",
+      value: "@julissarosas",
+      link: "https://www.linkedin.com/in/julissarosas/",
     },
   ];
 
@@ -42,7 +32,7 @@ export default function Contact() {
     <section
       id="contact"
       className={`min-h-screen transition-colors duration-300 py-12 md:py-20 relative overflow-hidden ${
-        isDarkMode ? "bg-gray-900" : "bg-white"
+        isDarkMode ? "bg-gray-900" : "bg-[#ffeaf4]"
       }`}
     >
       {/* Background decorative elements */}
@@ -74,7 +64,7 @@ export default function Contact() {
           }`}
         >
           <h2
-            className={`text-4xl md:text-5xl lg:text-7xl font-bold bg-clip-text text-transparent mb-4 md:mb-6 tracking-tight ${
+            className={`text-5xl md:text-6xl lg:text-8xl font-bold bg-clip-text text-transparent mb-6 md:mb-8 tracking-tight ${
               isDarkMode
                 ? "bg-gradient-to-r from-white via-gray-100 to-gray-300"
                 : "bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700"
@@ -82,14 +72,6 @@ export default function Contact() {
           >
             Let&apos;s Connect
           </h2>
-          <p
-            className={`text-lg md:text-xl max-w-2xl mx-auto leading-relaxed px-4 ${
-              isDarkMode ? "text-gray-300" : "text-slate-600"
-            }`}
-          >
-            Ready to grow your social media presence? Let&apos;s discuss how we
-            can elevate your brand together.
-          </p>
         </div>
 
         {/* Contact Info */}
@@ -101,14 +83,14 @@ export default function Contact() {
           >
             <div className="text-center mb-8 md:mb-12">
               <h3
-                className={`text-2xl md:text-3xl font-bold mb-4 md:mb-6 ${
+                className={`text-3xl md:text-4xl font-bold mb-6 md:mb-8 ${
                   isDarkMode ? "text-white" : "text-slate-900"
                 }`}
               >
                 Get in Touch
               </h3>
               <p
-                className={`text-base md:text-lg leading-relaxed mb-6 md:mb-8 px-4 ${
+                className={`text-lg md:text-xl leading-relaxed mb-8 md:mb-12 px-4 ${
                   isDarkMode ? "text-gray-300" : "text-slate-600"
                 }`}
               >
@@ -119,14 +101,14 @@ export default function Contact() {
             </div>
 
             {/* Contact Methods */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
               {contactInfo.map((contact, index) => (
                 <a
                   key={contact.label}
                   href={contact.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center p-4 md:p-6 backdrop-blur-sm rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover-lift border group ${
+                  className={`flex items-center p-6 md:p-8 backdrop-blur-sm rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover-lift border group ${
                     isLoaded ? "animate-scale-in" : "opacity-0"
                   } ${
                     isDarkMode
@@ -136,7 +118,7 @@ export default function Contact() {
                   style={{ animationDelay: `${0.2 + index * 0.1}s` }}
                 >
                   <div
-                    className={`w-10 md:w-12 h-10 md:h-12 rounded-full flex items-center justify-center text-xl md:text-2xl mr-3 md:mr-4 group-hover:scale-110 transition-transform duration-300 ${
+                    className={`w-12 md:w-16 h-12 md:h-16 rounded-full flex items-center justify-center text-2xl md:text-3xl mr-4 md:mr-6 group-hover:scale-110 transition-transform duration-300 ${
                       isDarkMode
                         ? "bg-gradient-to-r from-gray-600/50 to-gray-700/50"
                         : "bg-gradient-to-r from-slate-200/50 to-slate-300/50"
@@ -146,14 +128,14 @@ export default function Contact() {
                   </div>
                   <div>
                     <div
-                      className={`font-semibold mb-1 text-sm md:text-base ${
+                      className={`font-semibold mb-2 text-base md:text-lg ${
                         isDarkMode ? "text-white" : "text-slate-900"
                       }`}
                     >
                       {contact.label}
                     </div>
                     <div
-                      className={`text-xs md:text-sm group-hover:text-slate-800 transition-colors duration-300 ${
+                      className={`text-sm md:text-base group-hover:text-slate-800 transition-colors duration-300 ${
                         isDarkMode
                           ? "text-gray-300 group-hover:text-gray-200"
                           : "text-slate-600"
@@ -168,24 +150,24 @@ export default function Contact() {
 
             {/* Availability */}
             <div
-              className={`p-6 md:p-8 backdrop-blur-sm rounded-xl md:rounded-2xl border shadow-lg ${
+              className={`p-8 md:p-12 backdrop-blur-sm rounded-xl md:rounded-2xl border shadow-lg ${
                 isDarkMode
                   ? "bg-gray-800/60 border-gray-600/50"
                   : "bg-white/60 border-slate-200/50"
               }`}
             >
               <h4
-                className={`text-lg md:text-xl font-semibold mb-3 md:mb-4 text-center ${
+                className={`text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-center ${
                   isDarkMode ? "text-white" : "text-slate-900"
                 }`}
               >
                 Availability
               </h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                 <div className="flex items-center justify-center">
-                  <div className="w-2 md:w-3 h-2 md:h-3 bg-green-500 rounded-full mr-2 md:mr-3 flex-shrink-0"></div>
+                  <div className="w-3 md:w-4 h-3 md:h-4 bg-green-500 rounded-full mr-3 md:mr-4 flex-shrink-0"></div>
                   <span
-                    className={`text-xs md:text-sm ${
+                    className={`text-sm md:text-base ${
                       isDarkMode ? "text-gray-300" : "text-slate-600"
                     }`}
                   >
@@ -193,9 +175,9 @@ export default function Contact() {
                   </span>
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="w-2 md:w-3 h-2 md:h-3 bg-green-500 rounded-full mr-2 md:mr-3 flex-shrink-0"></div>
+                  <div className="w-3 md:w-4 h-3 md:h-4 bg-green-500 rounded-full mr-3 md:mr-4 flex-shrink-0"></div>
                   <span
-                    className={`text-xs md:text-sm ${
+                    className={`text-sm md:text-base ${
                       isDarkMode ? "text-gray-300" : "text-slate-600"
                     }`}
                   >
@@ -203,9 +185,9 @@ export default function Contact() {
                   </span>
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="w-2 md:w-3 h-2 md:h-3 bg-green-500 rounded-full mr-2 md:mr-3 flex-shrink-0"></div>
+                  <div className="w-3 md:w-4 h-3 md:h-4 bg-green-500 rounded-full mr-3 md:mr-4 flex-shrink-0"></div>
                   <span
-                    className={`text-xs md:text-sm ${
+                    className={`text-sm md:text-base ${
                       isDarkMode ? "text-gray-300" : "text-slate-600"
                     }`}
                   >
@@ -217,6 +199,9 @@ export default function Contact() {
           </div>
         </div>
       </div>
+      <p className="text-xs text-center text-gray-400 mt-8 mb-2">
+        © {new Date().getFullYear()} Julissa Rosas. All rights reserved.
+      </p>
     </section>
   );
 }

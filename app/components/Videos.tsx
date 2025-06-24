@@ -50,7 +50,7 @@ export default function Videos() {
     <section
       id="videos"
       className={`min-h-screen transition-colors duration-300 py-12 md:py-20 relative overflow-hidden ${
-        isDarkMode ? "bg-gray-900" : "bg-white"
+        isDarkMode ? "bg-gray-900" : "bg-[#ffeaf4]"
       }`}
     >
       {/* Background decorative elements */}

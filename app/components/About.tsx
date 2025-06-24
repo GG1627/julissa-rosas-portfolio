@@ -210,32 +210,127 @@ export default function About() {
               Experiences
             </h3>
             <div className="space-y-4 md:space-y-6 mb-8">
-              {[1, 2, 3, 4, 5].map((num) => (
-                <div
-                  key={num}
-                  className={`p-4 md:p-6 rounded-2xl border shadow-lg transition-all duration-300 ${
-                    isDarkMode
-                      ? "bg-gray-800/60 border-gray-600/50"
-                      : "bg-white/60 border-slate-200/50"
+              <div
+                className={`p-4 md:p-6 rounded-2xl border shadow-lg transition-all duration-300 ${
+                  isDarkMode
+                    ? "bg-gray-800/60 border-gray-600/50"
+                    : "bg-white/60 border-slate-200/50"
+                }`}
+              >
+                <h4
+                  className={`font-bold text-xl md:text-2xl mb-1 ${
+                    isDarkMode ? "text-white" : "text-slate-900"
                   }`}
                 >
+                  Bean Trolley Cafe
+                </h4>
+                <div
+                  className={`font-medium text-base md:text-lg mb-1 ${
+                    isDarkMode ? "text-gray-200" : "text-slate-700"
+                  }`}
+                >
+                  Social Media Intern
+                </div>
+                <div
+                  className={`text-xs md:text-sm mb-2 ${
+                    isDarkMode ? "text-gray-400" : "text-slate-500"
+                  }`}
+                >
+                  Naples, FL
+                </div>
+                <p
+                  className={`text-sm md:text-base ${
+                    isDarkMode ? "text-gray-300" : "text-slate-600"
+                  }`}
+                >
+                  Worked with a local brand to develop engaging content and grow
+                  their online presence. Gained hands-on experience in content
+                  creation, analytics, and community management.
+                </p>
+              </div>
+              <div
+                className={`p-4 md:p-6 rounded-2xl border shadow-lg transition-all duration-300 ${
+                  isDarkMode
+                    ? "bg-gray-800/60 border-gray-600/50"
+                    : "bg-white/60 border-slate-200/50"
+                }`}
+              >
+                <div className="flex items-center gap-3 mb-1">
                   <h4
-                    className={`font-semibold text-lg md:text-xl mb-2 ${
+                    className={`font-bold text-xl md:text-2xl ${
                       isDarkMode ? "text-white" : "text-slate-900"
                     }`}
                   >
-                    Experience Title {num}
+                    Delta Nu Zeta
                   </h4>
-                  <p
-                    className={`text-sm md:text-base ${
-                      isDarkMode ? "text-gray-300" : "text-slate-600"
-                    }`}
-                  >
-                    This is a description for experience {num}. You can update
-                    this with real information later.
-                  </p>
+                  <img
+                    src="/images/DNZ.png"
+                    alt="Delta Nu Zeta Logo"
+                    className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover border border-gray-300"
+                  />
                 </div>
-              ))}
+                <div
+                  className={`font-medium text-base md:text-lg mb-1 ${
+                    isDarkMode ? "text-gray-200" : "text-slate-700"
+                  }`}
+                >
+                  Social Media Committe
+                </div>
+                <div
+                  className={`text-xs md:text-sm mb-2 ${
+                    isDarkMode ? "text-gray-400" : "text-slate-500"
+                  }`}
+                >
+                  Tallahassee, FL
+                </div>
+                <p
+                  className={`text-sm md:text-base ${
+                    isDarkMode ? "text-gray-300" : "text-slate-600"
+                  }`}
+                >
+                  Managed the chapter's social media presence, created content,
+                  and increased engagement through creative campaigns and
+                  community outreach.
+                </p>
+              </div>
+              <div
+                className={`p-4 md:p-6 rounded-2xl border shadow-lg transition-all duration-300 ${
+                  isDarkMode
+                    ? "bg-gray-800/60 border-gray-600/50"
+                    : "bg-white/60 border-slate-200/50"
+                }`}
+              >
+                <h4
+                  className={`font-bold text-xl md:text-2xl mb-1 ${
+                    isDarkMode ? "text-white" : "text-slate-900"
+                  }`}
+                >
+                  The Finance Society
+                </h4>
+                <div
+                  className={`font-medium text-base md:text-lg mb-1 ${
+                    isDarkMode ? "text-gray-200" : "text-slate-700"
+                  }`}
+                >
+                  VP of Marketing Shadow
+                </div>
+                <div
+                  className={`text-xs md:text-sm mb-2 ${
+                    isDarkMode ? "text-gray-400" : "text-slate-500"
+                  }`}
+                >
+                  Tallahassee, FL
+                </div>
+                <p
+                  className={`text-sm md:text-base ${
+                    isDarkMode ? "text-gray-300" : "text-slate-600"
+                  }`}
+                >
+                  Oversaw marketing initiatives, coordinated events, and led a
+                  team to promote the organization's mission and activities to
+                  the student body.
+                </p>
+              </div>
             </div>
           </div>
         </div>

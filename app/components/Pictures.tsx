@@ -99,7 +99,7 @@ export default function Picture() {
     <section
       id="picture"
       className={`min-h-screen transition-colors duration-300 py-12 md:py-20 relative overflow-hidden ${
-        isDarkMode ? "bg-gray-900" : "bg-white"
+        isDarkMode ? "bg-gray-900" : "bg-[#ffeaf4]"
       }`}
     >
       {/* Background decorative elements */}
@@ -144,8 +144,7 @@ export default function Picture() {
               isDarkMode ? "text-gray-300" : "text-slate-600"
             }`}
           >
-            A creative collection of moments captured through my lens. Each
-            image tells its own unique story.
+            A creative collection of moments captured through my lens.
           </p>
         </div>
 
@@ -174,19 +173,7 @@ export default function Picture() {
                 />
 
                 {/* Creative Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <h3 className="font-semibold text-white text-base md:text-lg mb-1 md:mb-2">
-                      {image.title}
-                    </h3>
-                    <p className="text-xs md:text-sm text-gray-200 leading-relaxed mb-2 md:mb-3">
-                      {image.description}
-                    </p>
-
-                    {/* Creative accent line */}
-                    <div className="w-8 md:w-12 h-0.5 bg-white/60 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                  </div>
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
 
                 {/* Floating accent elements */}
                 <div className="absolute top-2 md:top-4 right-2 md:right-4 w-1.5 md:w-2 h-1.5 md:h-2 bg-white/60 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse"></div>
