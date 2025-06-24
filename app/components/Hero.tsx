@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       className={`relative h-screen flex flex-col overflow-hidden transition-colors duration-300 ${
-        isDarkMode ? "bg-gray-900" : "bg-white"
+        isDarkMode ? "bg-gray-900" : "bg-[#ffeaf4]"
       }`}
     >
       {/* Enhanced background with animated elements */}
@@ -66,7 +66,7 @@ export default function Hero() {
       </div>
 
       {/* Dark Mode Toggle */}
-      <div className="relative z-20 flex justify-end pt-4 md:pt-8 px-4">
+      <div className="relative z-20 flex justify-end px-0 mt-4 mr-4">
         <button
           onClick={toggleDarkMode}
           className={`p-3 rounded-full transition-all duration-300 hover-lift shadow-lg ${
@@ -92,7 +92,7 @@ export default function Hero() {
       </div>
 
       {/* Navigation with enhanced styling */}
-      <nav className="relative z-10 flex justify-center pt-4 md:pt-8 px-4">
+      <nav className="relative z-10 flex justify-center px-0 pt-0 mt-0">
         <div
           className={`backdrop-blur-xl rounded-full px-4 md:px-8 py-3 md:py-4 shadow-lg border transition-all duration-500 hover:shadow-xl ${
             isDarkMode
@@ -145,9 +145,9 @@ export default function Hero() {
             >
               {/* Name with enhanced styling */}
               <div className="relative">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-none tracking-tight relative">
+                <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-4 md:mb-6 leading-none tracking-tight relative">
                   <span
-                    className={`bg-clip-text text-transparent ${
+                    className={`bg-clip-text text-transparent font-noto-serif-display ${
                       isDarkMode
                         ? "bg-gradient-to-r from-white via-gray-100 to-gray-300"
                         : "bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700"
@@ -157,7 +157,7 @@ export default function Hero() {
                   </span>
                   <br />
                   <span
-                    className={`font-light relative ${
+                    className={`font-light relative font-noto-serif-display ${
                       isDarkMode ? "text-gray-400" : "text-slate-600"
                     }`}
                   >
@@ -199,8 +199,6 @@ export default function Hero() {
                   cursor={true}
                   repeat={Infinity}
                   sequence={[
-                    "Social Media Manager",
-                    2000,
                     "Content Creator",
                     2000,
                     "Brand Strategist",
@@ -244,7 +242,8 @@ export default function Hero() {
                 }`}
                 style={{ animationDelay: "0.7s" }}
               >
-                <button
+                <a
+                  href="#picture"
                   className={`group font-medium py-3 px-6 md:px-8 rounded-full transition-all duration-300 hover-lift shadow-lg hover:shadow-xl relative overflow-hidden ${
                     isDarkMode
                       ? "bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white"
@@ -259,8 +258,9 @@ export default function Hero() {
                         : "bg-gradient-to-r from-slate-800 to-slate-700"
                     }`}
                   ></div>
-                </button>
-                <button
+                </a>
+                <a
+                  href="#contact"
                   className={`group border font-medium py-3 px-6 md:px-8 rounded-full transition-all duration-300 hover-lift relative overflow-hidden ${
                     isDarkMode
                       ? "border-gray-600 text-gray-300 hover:bg-gray-800 hover:border-gray-500"
@@ -273,44 +273,7 @@ export default function Hero() {
                       isDarkMode ? "bg-gray-800" : "bg-slate-50"
                     }`}
                   ></div>
-                </button>
-              </div>
-
-              {/* Enhanced Stats */}
-              <div
-                className={`flex gap-4 md:gap-8 mt-8 md:mt-12 justify-center lg:justify-start ${
-                  isLoaded ? "animate-fade-in-up" : "opacity-0"
-                }`}
-                style={{ animationDelay: "0.9s" }}
-              >
-                {[
-                  { number: "500+", label: "Projects Completed", icon: "✨" },
-                  { number: "50K+", label: "Followers Reached", icon: "👥" },
-                  { number: "95%", label: "Client Satisfaction", icon: "💫" },
-                ].map((stat, index) => (
-                  <div key={index} className="text-center group">
-                    <div
-                      className={`text-xl md:text-2xl font-semibold mb-1 transition-colors duration-300 ${
-                        isDarkMode
-                          ? "text-white group-hover:text-gray-300"
-                          : "text-slate-900 group-hover:text-slate-700"
-                      }`}
-                    >
-                      {stat.number}
-                    </div>
-                    <div
-                      className={`text-xs md:text-sm flex items-center justify-center gap-1 ${
-                        isDarkMode ? "text-gray-400" : "text-slate-500"
-                      }`}
-                    >
-                      <span className="text-xs">{stat.icon}</span>
-                      <span className="hidden sm:inline">{stat.label}</span>
-                      <span className="sm:hidden">
-                        {stat.label.split(" ")[0]}
-                      </span>
-                    </div>
-                  </div>
-                ))}
+                </a>
               </div>
             </div>
 
@@ -322,56 +285,19 @@ export default function Hero() {
               style={{ animationDelay: "0.4s" }}
             >
               <div className="relative group">
-                {/* Main Image with enhanced styling */}
-                <div className="relative z-10">
-                  <div className="relative">
-                    <img
-                      src="/images/julissa1.png"
-                      alt="Julissa Rosas"
-                      className="w-full h-auto max-w-sm md:max-w-md lg:max-w-lg mx-auto rounded-2xl shadow-xl group-hover:shadow-2xl transition-all duration-500 group-hover:scale-[1.02]"
-                    />
-
-                    {/* Image border glow */}
-                    <div
-                      className={`absolute inset-0 rounded-2xl blur-xl -z-10 group-hover:blur-2xl transition-all duration-500 ${
-                        isDarkMode
-                          ? "bg-gradient-to-br from-gray-600/20 to-gray-700/10"
-                          : "bg-gradient-to-br from-slate-200/20 to-slate-300/10"
-                      }`}
-                    ></div>
-                  </div>
-                </div>
-
-                {/* Enhanced decorative elements */}
-                <div
-                  className={`absolute -top-4 md:-top-6 -right-4 md:-right-6 w-20 md:w-32 h-20 md:h-32 rounded-full blur-xl animate-float ${
-                    isDarkMode
-                      ? "bg-gradient-to-br from-gray-600/40 to-gray-700/20"
-                      : "bg-gradient-to-br from-slate-200/40 to-slate-300/20"
-                  }`}
-                ></div>
-                <div
-                  className={`absolute -bottom-4 md:-bottom-6 -left-4 md:-left-6 w-16 md:w-24 h-16 md:h-24 rounded-full blur-xl animate-float ${
-                    isDarkMode
-                      ? "bg-gradient-to-tr from-gray-600/30 to-gray-700/10"
-                      : "bg-gradient-to-tr from-slate-200/30 to-slate-300/10"
-                  }`}
-                  style={{ animationDelay: "1s" }}
-                ></div>
-
-                {/* Floating accent dots */}
-                <div
-                  className={`absolute top-4 right-4 w-2 h-2 rounded-full animate-pulse ${
-                    isDarkMode ? "bg-gray-400/60" : "bg-slate-400/60"
-                  }`}
-                  style={{ animationDelay: "0.5s" }}
-                ></div>
-                <div
-                  className={`absolute bottom-4 left-4 w-1.5 h-1.5 rounded-full animate-pulse ${
-                    isDarkMode ? "bg-gray-400/40" : "bg-slate-400/40"
-                  }`}
-                  style={{ animationDelay: "1s" }}
-                ></div>
+                {/* Main Image only, no background or box */}
+                <img
+                  src="/images/julissa1.png"
+                  alt="Julissa Rosas"
+                  className="w-full h-auto mx-auto"
+                  style={{
+                    minHeight: "400px",
+                    minWidth: "400px",
+                    maxWidth: "none",
+                    width: "100%",
+                    objectFit: "cover",
+                  }}
+                />
               </div>
             </div>
           </div>

@@ -11,27 +11,21 @@ export default function About() {
   const skills = [
     {
       category: "Platforms",
-      items: ["Instagram", "TikTok", "Twitter", "LinkedIn", "YouTube"],
+      items: ["Instagram", "TikTok", "LinkedIn"],
       icon: "📱",
       color: "from-blue-500 to-indigo-600",
     },
     {
       category: "Content",
-      items: ["Photos", "Videos", "Stories", "Reels", "Live Streams"],
+      items: ["Photos", "Videos", "Stories", "Reels"],
       icon: "🎬",
       color: "from-purple-500 to-pink-600",
     },
     {
       category: "Tools",
-      items: ["Canva", "CapCut", "Analytics", "Scheduling", "Editing"],
+      items: ["Canva", "CapCut", "Editing", "Microsoft 360", "Nikon D 5600"],
       icon: "🛠️",
       color: "from-emerald-500 to-teal-600",
-    },
-    {
-      category: "Strategy",
-      items: ["Campaigns", "Engagement", "Growth", "Branding", "ROI"],
-      icon: "📈",
-      color: "from-orange-500 to-amber-600",
     },
   ];
 
@@ -49,7 +43,7 @@ export default function About() {
     <section
       id="about"
       className={`min-h-screen transition-colors duration-300 py-12 md:py-20 relative overflow-hidden ${
-        isDarkMode ? "bg-gray-900" : "bg-white"
+        isDarkMode ? "bg-gray-900" : "bg-[#ffeaf4]"
       }`}
     >
       {/* Background decorative elements */}
@@ -80,6 +74,13 @@ export default function About() {
             isLoaded ? "animate-fade-in-up" : "opacity-0"
           }`}
         >
+          <div className="flex items-center justify-center mb-6">
+            <img
+              src="/logo.png"
+              alt="Julissa Rosas Logo"
+              className="w-28 h-28 md:w-36 md:h-36 rounded-full shadow-lg"
+            />
+          </div>
           <h2
             className={`text-4xl md:text-5xl lg:text-7xl font-bold bg-clip-text text-transparent mb-4 md:mb-6 tracking-tight ${
               isDarkMode
@@ -89,112 +90,114 @@ export default function About() {
           >
             About Me
           </h2>
-          <p
-            className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed px-4 ${
-              isDarkMode ? "text-gray-300" : "text-slate-600"
-            }`}
-          >
-            A creative social media specialist with a passion for building
-            engaging online communities and creating compelling content that
-            drives brand awareness and engagement.
-          </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-start">
-          {/* Left Column - Story */}
+        {/* Two Column Layout */}
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-start mb-16">
+          {/* Left Column - My Story & Education, then What I Do */}
           <div
             className={`space-y-6 md:space-y-8 ${
               isLoaded ? "animate-fade-in-left" : "opacity-0"
             }`}
           >
-            <div className="space-y-4 md:space-y-6">
-              <h3
-                className={`text-2xl md:text-3xl font-bold ${
-                  isDarkMode ? "text-white" : "text-slate-900"
-                }`}
-              >
-                My Story
-              </h3>
-              <p
-                className={`text-base md:text-lg leading-relaxed ${
-                  isDarkMode ? "text-gray-300" : "text-slate-600"
-                }`}
-              >
-                With over 5 years of experience in content strategy, community
-                management, and social media marketing, I help brands connect
-                authentically with their audiences across all major platforms.
-              </p>
-              <p
-                className={`text-base md:text-lg leading-relaxed ${
-                  isDarkMode ? "text-gray-300" : "text-slate-600"
-                }`}
-              >
-                I believe in the power of storytelling and authentic
-                connections. Every piece of content I create is designed to
-                resonate with real people and drive meaningful engagement.
-              </p>
-            </div>
-
-            {/* Experience Stats */}
-            <div className="grid grid-cols-3 gap-4 md:gap-6 pt-6 md:pt-8">
-              {[
-                { number: "5+", label: "Years Experience", icon: "⭐" },
-                { number: "100+", label: "Brands Helped", icon: "💼" },
-                { number: "1M+", label: "Reach Generated", icon: "📊" },
-              ].map((stat, index) => (
-                <div key={index} className="text-center group">
-                  <div
-                    className={`text-2xl md:text-3xl font-bold bg-clip-text text-transparent mb-1 transition-all duration-300 ${
-                      isDarkMode
-                        ? "bg-gradient-to-r from-white to-gray-300 group-hover:from-gray-300 group-hover:to-gray-400"
-                        : "bg-gradient-to-r from-slate-900 to-slate-700 group-hover:from-slate-700 group-hover:to-slate-600"
-                    }`}
-                  >
-                    {stat.number}
-                  </div>
-                  <div
-                    className={`text-xs md:text-sm flex items-center justify-center gap-1 ${
-                      isDarkMode ? "text-gray-400" : "text-slate-500"
-                    }`}
-                  >
-                    <span className="text-xs">{stat.icon}</span>
-                    <span className="hidden sm:inline">{stat.label}</span>
-                    <span className="sm:hidden">
-                      {stat.label.split(" ")[0]}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Philosophy Card */}
-            <div
-              className={`p-6 md:p-8 backdrop-blur-sm rounded-2xl border shadow-lg hover:shadow-xl transition-all duration-500 ${
-                isDarkMode
-                  ? "bg-gray-800/60 border-gray-600/50"
-                  : "bg-white/60 border-slate-200/50"
+            <h3
+              className={`text-2xl md:text-3xl font-bold ${
+                isDarkMode ? "text-white" : "text-slate-900"
               }`}
             >
-              <h4
-                className={`text-lg md:text-xl font-semibold mb-3 md:mb-4 ${
+              My Story
+            </h3>
+            <p
+              className={`text-base md:text-lg leading-relaxed ${
+                isDarkMode ? "text-gray-300" : "text-slate-600"
+              }`}
+            >
+              I'm a Marketing and Finance student at Florida State University
+              with a passion for storytelling, brand development, and creative
+              strategy. My journey combines hands-on experience with small
+              businesses and a strong academic foundation to help brands grow
+              through thoughtful content, data-driven decisions, and a
+              people-first approach.
+            </p>
+            <p
+              className={`text-base md:text-lg leading-relaxed ${
+                isDarkMode ? "text-gray-300" : "text-slate-600"
+              }`}
+            >
+              From internships in the U.S. and abroad to campus involvement and
+              freelance projects, I'm constantly exploring new ways to connect
+              ideas with impact.
+            </p>
+
+            {/* What I Do Section (Skills Grid) */}
+            <div
+              className={`${isLoaded ? "animate-fade-in-up" : "opacity-0"}`}
+              style={{ animationDelay: "0.3s" }}
+            >
+              <h3
+                className={`text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-center ${
                   isDarkMode ? "text-white" : "text-slate-900"
                 }`}
               >
-                My Philosophy
-              </h4>
-              <p
-                className={`text-sm md:text-base leading-relaxed italic ${
-                  isDarkMode ? "text-gray-300" : "text-slate-600"
-                }`}
-              >
-                &ldquo;Authenticity is the key to meaningful connections. I
-                create content that doesn&apos;t just look good—it feels real,
-                resonates with audiences, and drives results.&rdquo;
-              </p>
+                What I Do
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+                {skills.map((skill, index) => (
+                  <div
+                    key={skill.category}
+                    className={`relative group cursor-pointer transition-all duration-500 hover-lift ${
+                      activeSkill === index ? "scale-105" : ""
+                    }`}
+                    onMouseEnter={() => setActiveSkill(index)}
+                    style={{ animationDelay: `${0.4 + index * 0.1}s` }}
+                  >
+                    <div
+                      className={`backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border ${
+                        isDarkMode
+                          ? "bg-gray-800/80 border-gray-600/50"
+                          : "bg-white/80 border-slate-200/50"
+                      }`}
+                    >
+                      <div className="flex items-center mb-3 md:mb-4">
+                        <div
+                          className={`w-10 md:w-12 h-10 md:h-12 rounded-full bg-gradient-to-r ${skill.color} flex items-center justify-center text-xl md:text-2xl mr-3 md:mr-4 shadow-lg`}
+                        >
+                          {skill.icon}
+                        </div>
+                        <h4
+                          className={`font-semibold text-base md:text-lg ${
+                            isDarkMode ? "text-white" : "text-slate-900"
+                          }`}
+                        >
+                          {skill.category}
+                        </h4>
+                      </div>
+                      <div className="space-y-1 md:space-y-2">
+                        {skill.items.map((item, itemIndex) => (
+                          <div
+                            key={item}
+                            className={`text-xs md:text-sm transition-all duration-300 ${
+                              activeSkill === index
+                                ? isDarkMode
+                                  ? "text-white font-medium"
+                                  : "text-slate-900 font-medium"
+                                : isDarkMode
+                                ? "text-gray-300"
+                                : "text-slate-600"
+                            }`}
+                            style={{ transitionDelay: `${itemIndex * 50}ms` }}
+                          >
+                            • {item}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-
-          {/* Right Column - Skills */}
+          {/* Right Column - Experiences (5 default boxes) */}
           <div
             className={`${isLoaded ? "animate-fade-in-right" : "opacity-0"}`}
             style={{ animationDelay: "0.3s" }}
@@ -204,121 +207,35 @@ export default function About() {
                 isDarkMode ? "text-white" : "text-slate-900"
               }`}
             >
-              What I Do
+              Experiences
             </h3>
-
-            {/* Skills Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-              {skills.map((skill, index) => (
+            <div className="space-y-4 md:space-y-6 mb-8">
+              {[1, 2, 3, 4, 5].map((num) => (
                 <div
-                  key={skill.category}
-                  className={`relative group cursor-pointer transition-all duration-500 hover-lift ${
-                    activeSkill === index ? "scale-105" : ""
+                  key={num}
+                  className={`p-4 md:p-6 rounded-2xl border shadow-lg transition-all duration-300 ${
+                    isDarkMode
+                      ? "bg-gray-800/60 border-gray-600/50"
+                      : "bg-white/60 border-slate-200/50"
                   }`}
-                  onMouseEnter={() => setActiveSkill(index)}
-                  style={{ animationDelay: `${0.4 + index * 0.1}s` }}
                 >
-                  <div
-                    className={`backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border ${
-                      isDarkMode
-                        ? "bg-gray-800/80 border-gray-600/50"
-                        : "bg-white/80 border-slate-200/50"
+                  <h4
+                    className={`font-semibold text-lg md:text-xl mb-2 ${
+                      isDarkMode ? "text-white" : "text-slate-900"
                     }`}
                   >
-                    <div className="flex items-center mb-3 md:mb-4">
-                      <div
-                        className={`w-10 md:w-12 h-10 md:h-12 rounded-full bg-gradient-to-r ${skill.color} flex items-center justify-center text-xl md:text-2xl mr-3 md:mr-4 shadow-lg`}
-                      >
-                        {skill.icon}
-                      </div>
-                      <h4
-                        className={`font-semibold text-base md:text-lg ${
-                          isDarkMode ? "text-white" : "text-slate-900"
-                        }`}
-                      >
-                        {skill.category}
-                      </h4>
-                    </div>
-
-                    <div className="space-y-1 md:space-y-2">
-                      {skill.items.map((item, itemIndex) => (
-                        <div
-                          key={item}
-                          className={`text-xs md:text-sm transition-all duration-300 ${
-                            activeSkill === index
-                              ? isDarkMode
-                                ? "text-white font-medium"
-                                : "text-slate-900 font-medium"
-                              : isDarkMode
-                              ? "text-gray-300"
-                              : "text-slate-600"
-                          }`}
-                          style={{ transitionDelay: `${itemIndex * 50}ms` }}
-                        >
-                          • {item}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                    Experience Title {num}
+                  </h4>
+                  <p
+                    className={`text-sm md:text-base ${
+                      isDarkMode ? "text-gray-300" : "text-slate-600"
+                    }`}
+                  >
+                    This is a description for experience {num}. You can update
+                    this with real information later.
+                  </p>
                 </div>
               ))}
-            </div>
-
-            {/* Values Section */}
-            <div
-              className={`mt-8 md:mt-12 p-6 md:p-8 backdrop-blur-sm rounded-2xl border ${
-                isDarkMode
-                  ? "bg-gradient-to-r from-gray-800 to-gray-900 border-gray-600/50"
-                  : "bg-gradient-to-r from-slate-50 to-slate-100 border-slate-200/50"
-              }`}
-            >
-              <h4
-                className={`text-lg md:text-xl font-semibold mb-3 md:mb-4 ${
-                  isDarkMode ? "text-white" : "text-slate-900"
-                }`}
-              >
-                My Values
-              </h4>
-              <div className="grid grid-cols-1 gap-3 md:gap-4">
-                {[
-                  {
-                    value: "Authenticity",
-                    desc: "Real connections over perfect posts",
-                  },
-                  {
-                    value: "Creativity",
-                    desc: "Innovative approaches to content",
-                  },
-                  {
-                    value: "Results",
-                    desc: "Data-driven strategies that work",
-                  },
-                ].map((value, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <div
-                      className={`w-2 h-2 rounded-full flex-shrink-0 ${
-                        isDarkMode ? "bg-gray-400" : "bg-slate-400"
-                      }`}
-                    ></div>
-                    <div>
-                      <div
-                        className={`font-medium text-sm md:text-base ${
-                          isDarkMode ? "text-white" : "text-slate-900"
-                        }`}
-                      >
-                        {value.value}
-                      </div>
-                      <div
-                        className={`text-xs md:text-sm ${
-                          isDarkMode ? "text-gray-400" : "text-slate-500"
-                        }`}
-                      >
-                        {value.desc}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>

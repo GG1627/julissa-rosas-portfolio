@@ -17,6 +17,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Noto Serif Display";
+  src: url("/fonts/NotoSerifDisplay-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -289,4 +298,8 @@ body {
 
 .font-dm-sans {
   font-family: "DM Sans", sans-serif;
+}
+
+.font-noto-serif-display {
+  font-family: "Noto Serif Display", serif;
 }
