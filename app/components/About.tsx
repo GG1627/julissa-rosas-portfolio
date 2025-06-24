@@ -112,11 +112,13 @@ export default function About() {
                 isDarkMode ? "text-gray-300" : "text-slate-600"
               }`}
             >
-              I&apos;m a Marketing and Finance student at Florida State
-              University with a passion for storytelling, brand development, and
-              creative strategy. My journey combines hands-on experience with
-              small businesses and a strong academic foundation to help brands
-              grow through thoughtful content, data-driven decisions, and a
+              I&apos;m a <span className="font-semibold">Marketing</span> and{" "}
+              <span className="font-semibold">Finance</span> student at{" "}
+              <span className="font-semibold">Florida State University</span>{" "}
+              with a passion for storytelling, brand development, and creative
+              strategy. My journey combines hands-on experience with small
+              businesses and a strong academic foundation to help brands grow
+              through thoughtful content, data-driven decisions, and a
               people-first approach.
             </p>
             <p
@@ -217,13 +219,20 @@ export default function About() {
                     : "bg-white/60 border-slate-200/50"
                 }`}
               >
-                <h4
-                  className={`font-bold text-xl md:text-2xl mb-1 ${
-                    isDarkMode ? "text-white" : "text-slate-900"
-                  }`}
-                >
-                  Bean Trolley Cafe
-                </h4>
+                <div className="flex items-center gap-3 mb-1">
+                  <h4
+                    className={`font-bold text-xl md:text-2xl ${
+                      isDarkMode ? "text-white" : "text-slate-900"
+                    }`}
+                  >
+                    Bean Trolley Cafe
+                  </h4>
+                  <img
+                    src="/images/BeanCafe.png"
+                    alt="Bean Trolley Cafe Logo"
+                    className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover border border-gray-300"
+                  />
+                </div>
                 <div
                   className={`font-medium text-base md:text-lg mb-1 ${
                     isDarkMode ? "text-gray-200" : "text-slate-700"
@@ -300,13 +309,20 @@ export default function About() {
                     : "bg-white/60 border-slate-200/50"
                 }`}
               >
-                <h4
-                  className={`font-bold text-xl md:text-2xl mb-1 ${
-                    isDarkMode ? "text-white" : "text-slate-900"
-                  }`}
-                >
-                  The Finance Society
-                </h4>
+                <div className="flex items-center gap-3 mb-1">
+                  <h4
+                    className={`font-bold text-xl md:text-2xl ${
+                      isDarkMode ? "text-white" : "text-slate-900"
+                    }`}
+                  >
+                    The Finance Society
+                  </h4>
+                  <img
+                    src="/images/FSU_Finance.jpg"
+                    alt="FSU Finance Logo"
+                    className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover border border-gray-300"
+                  />
+                </div>
                 <div
                   className={`font-medium text-base md:text-lg mb-1 ${
                     isDarkMode ? "text-gray-200" : "text-slate-700"

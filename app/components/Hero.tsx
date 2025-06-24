@@ -92,7 +92,7 @@ export default function Hero() {
       </div>
 
       {/* Navigation with enhanced styling */}
-      <nav className="relative z-10 flex justify-center px-0 pt-0 mt-0">
+      <nav className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10 flex justify-center px-0">
         <div
           className={`backdrop-blur-xl rounded-full px-4 md:px-8 py-3 md:py-4 shadow-lg border transition-all duration-500 hover:shadow-xl ${
             isDarkMode
@@ -291,8 +291,8 @@ export default function Hero() {
                   alt="Julissa Rosas"
                   className="w-full h-auto mx-auto"
                   style={{
-                    minHeight: "400px",
-                    minWidth: "400px",
+                    minHeight: "300px",
+                    minWidth: "300px",
                     maxWidth: "none",
                     width: "100%",
                     objectFit: "cover",
