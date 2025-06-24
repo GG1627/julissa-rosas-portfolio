@@ -289,10 +289,10 @@ export default function Hero() {
                 <img
                   src="/images/julissa1.png"
                   alt="Julissa Rosas"
-                  className="w-full h-auto mx-auto"
+                  className="w-full h-auto mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none"
                   style={{
-                    minHeight: "300px",
-                    minWidth: "300px",
+                    minHeight: "200px",
+                    minWidth: "200px",
                     maxWidth: "none",
                     width: "100%",
                     objectFit: "cover",
