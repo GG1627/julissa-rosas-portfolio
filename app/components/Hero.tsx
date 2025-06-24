@@ -14,7 +14,7 @@ export default function Hero() {
 
   return (
     <section
-      className={`relative h-screen flex flex-col overflow-hidden transition-colors duration-300 ${
+      className={`relative min-h-screen flex flex-col overflow-hidden transition-colors duration-300 ${
         isDarkMode ? "bg-gray-900" : "bg-[#ffeaf4]"
       }`}
     >
@@ -134,7 +134,7 @@ export default function Hero() {
       </nav>
 
       {/* Main Content */}
-      <div className="relative z-10 flex-1 flex items-center">
+      <div className="relative z-10 flex-1 flex items-center py-8 md:py-0">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
             {/* Left Column - Enhanced Text Content */}
