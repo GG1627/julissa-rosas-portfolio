@@ -112,11 +112,11 @@ export default function About() {
                 isDarkMode ? "text-gray-300" : "text-slate-600"
               }`}
             >
-              I'm a Marketing and Finance student at Florida State University
-              with a passion for storytelling, brand development, and creative
-              strategy. My journey combines hands-on experience with small
-              businesses and a strong academic foundation to help brands grow
-              through thoughtful content, data-driven decisions, and a
+              I&apos;m a Marketing and Finance student at Florida State
+              University with a passion for storytelling, brand development, and
+              creative strategy. My journey combines hands-on experience with
+              small businesses and a strong academic foundation to help brands
+              grow through thoughtful content, data-driven decisions, and a
               people-first approach.
             </p>
             <p
@@ -125,8 +125,8 @@ export default function About() {
               }`}
             >
               From internships in the U.S. and abroad to campus involvement and
-              freelance projects, I'm constantly exploring new ways to connect
-              ideas with impact.
+              freelance projects, I&apos;m constantly exploring new ways to
+              connect ideas with impact.
             </p>
 
             {/* What I Do Section (Skills Grid) */}
@@ -288,9 +288,9 @@ export default function About() {
                     isDarkMode ? "text-gray-300" : "text-slate-600"
                   }`}
                 >
-                  Managed the chapter's social media presence, created content,
-                  and increased engagement through creative campaigns and
-                  community outreach.
+                  Managed the chapter&apos;s social media presence, created
+                  content, and increased engagement through creative campaigns
+                  and community outreach.
                 </p>
               </div>
               <div
@@ -327,8 +327,8 @@ export default function About() {
                   }`}
                 >
                   Oversaw marketing initiatives, coordinated events, and led a
-                  team to promote the organization's mission and activities to
-                  the student body.
+                  team to promote the organization&apos;s mission and activities
+                  to the student body.
                 </p>
               </div>
             </div>
