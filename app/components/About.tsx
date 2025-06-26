@@ -23,7 +23,13 @@ export default function About() {
     },
     {
       category: "Tools",
-      items: ["Canva", "CapCut", "Editing", "Microsoft 360", "Nikon D 5600"],
+      items: [
+        "Canva",
+        "CapCut",
+        "Photo Editing",
+        "Microsoft 360",
+        "Nikon D 5600",
+      ],
       icon: "🛠️",
       color: "from-emerald-500 to-teal-600",
     },

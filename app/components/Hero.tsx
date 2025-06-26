@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false);
-  const { isDarkMode, toggleDarkMode } = useTheme();
+  const { isDarkMode } = useTheme();
 
   useEffect(() => {
     setIsLoaded(true);
@@ -14,7 +14,7 @@ export default function Hero() {
 
   return (
     <section
-      className={`relative min-h-screen flex flex-col overflow-hidden transition-colors duration-300 ${
+      className={`relative min-h-screen flex flex-col overflow-hidden transition-colors duration-300 pt-20 ${
         isDarkMode ? "bg-gray-900" : "bg-[#ffeaf4]"
       }`}
     >
@@ -65,87 +65,29 @@ export default function Hero() {
         ></div>
       </div>
 
-      {/* Dark Mode Toggle */}
-      <div className="relative z-20 flex justify-end px-0 mt-4 mr-4">
-        <button
-          onClick={toggleDarkMode}
-          className={`p-3 rounded-full transition-all duration-300 hover-lift shadow-lg ${
-            isDarkMode
-              ? "bg-gray-800 text-yellow-400 hover:bg-gray-700"
-              : "bg-white text-gray-600 hover:bg-gray-50"
-          } border ${isDarkMode ? "border-gray-600" : "border-gray-200"}`}
-        >
-          {isDarkMode ? (
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path
-                fillRule="evenodd"
-                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                clipRule="evenodd"
-              />
-            </svg>
-          ) : (
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-            </svg>
-          )}
-        </button>
-      </div>
-
-      {/* Navigation with enhanced styling */}
-      <nav className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10 flex justify-center px-0">
-        <div
-          className={`backdrop-blur-xl rounded-full px-4 md:px-8 py-3 md:py-4 shadow-lg border transition-all duration-500 hover:shadow-xl ${
-            isDarkMode
-              ? "bg-gray-800/70 border-gray-600/50"
-              : "bg-white/70 border-slate-200/50"
-          }`}
-        >
-          <div className="flex space-x-4 md:space-x-8">
-            {[
-              { href: "#about", label: "About" },
-              { href: "#picture", label: "Pictures" },
-              { href: "#videos", label: "Videos" },
-              { href: "#contact", label: "Contact" },
-            ].map((link, index) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`transition-all duration-300 font-medium text-xs md:text-sm relative group ${
-                  isLoaded ? "animate-fade-in-up" : "opacity-0"
-                } ${
-                  isDarkMode
-                    ? "text-gray-300 hover:text-white"
-                    : "text-slate-600 hover:text-slate-900"
-                }`}
-                style={{ animationDelay: `${0.1 + index * 0.1}s` }}
-              >
-                {link.label}
-                <div
-                  className={`absolute bottom-0 left-0 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-full ${
-                    isDarkMode
-                      ? "bg-gradient-to-r from-gray-400 to-gray-600"
-                      : "bg-gradient-to-r from-slate-400 to-slate-600"
-                  }`}
-                ></div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </nav>
-
       {/* Main Content */}
       <div className="relative z-10 flex-1 flex items-center py-8 md:py-0">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-12 lg:gap-16 items-center">
             {/* Left Column - Enhanced Text Content */}
             <div
               className={`text-center lg:text-left ${
                 isLoaded ? "animate-fade-in-left" : "opacity-0"
               }`}
             >
+              {/* Friendly greeting */}
+              <div
+                className={`mb-3 md:mb-4 text-base sm:text-lg md:text-xl lg:text-2xl font-medium font-noto-serif-display ${
+                  isLoaded ? "animate-fade-in-left" : "opacity-0"
+                } ${isDarkMode ? "text-gray-400" : "text-slate-500"}`}
+                style={{ animationDelay: "0.1s" }}
+              >
+                Hey there!
+              </div>
+
               {/* Name with enhanced styling */}
               <div className="relative">
-                <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-4 md:mb-6 leading-none tracking-tight relative">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-3 md:mb-4 lg:mb-6 leading-none tracking-tight relative">
                   <span
                     className={`bg-clip-text text-transparent font-noto-serif-display ${
                       isDarkMode
@@ -163,7 +105,7 @@ export default function Hero() {
                   >
                     Rosas
                     <div
-                      className={`absolute -bottom-2 left-0 w-full h-0.5 rounded-full ${
+                      className={`absolute -bottom-1 md:-bottom-2 left-0 w-full h-0.5 rounded-full ${
                         isDarkMode
                           ? "bg-gradient-to-r from-gray-600 to-transparent"
                           : "bg-gradient-to-r from-slate-300 to-transparent"
@@ -174,7 +116,7 @@ export default function Hero() {
 
                 {/* Floating accent near name */}
                 <div
-                  className={`absolute -top-4 -right-4 w-6 md:w-8 h-6 md:h-8 rounded-full blur-sm animate-pulse ${
+                  className={`absolute -top-2 md:-top-4 -right-2 md:-right-4 w-4 md:w-6 lg:w-8 h-4 md:h-6 lg:h-8 rounded-full blur-sm animate-pulse ${
                     isDarkMode
                       ? "bg-gradient-to-br from-gray-600 to-gray-700"
                       : "bg-gradient-to-br from-slate-200 to-slate-300"
@@ -184,13 +126,13 @@ export default function Hero() {
 
               {/* Enhanced animated subtitle with TypeAnimation */}
               <div
-                className={`mb-6 md:mb-8 h-6 md:h-8 flex items-center justify-center lg:justify-start ${
+                className={`mb-4 md:mb-6 lg:mb-8 h-5 md:h-6 lg:h-8 flex items-center justify-center lg:justify-start ${
                   isLoaded ? "animate-fade-in-left" : "opacity-0"
                 }`}
                 style={{ animationDelay: "0.3s" }}
               >
                 <TypeAnimation
-                  className={`text-lg md:text-xl font-light bg-clip-text text-transparent ${
+                  className={`text-sm sm:text-base md:text-lg lg:text-xl font-light bg-clip-text text-transparent ${
                     isDarkMode
                       ? "bg-gradient-to-r from-gray-400 to-gray-500"
                       : "bg-gradient-to-r from-slate-500 to-slate-600"
@@ -208,7 +150,7 @@ export default function Hero() {
                   ]}
                 />
                 <span
-                  className={`text-lg md:text-xl ml-2 animate-pulse ${
+                  className={`text-sm sm:text-base md:text-lg lg:text-xl ml-2 animate-pulse ${
                     isDarkMode ? "text-gray-500" : "text-slate-400"
                   }`}
                 >
@@ -218,7 +160,7 @@ export default function Hero() {
 
               {/* Enhanced description */}
               <p
-                className={`text-base md:text-lg mb-8 md:mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed ${
+                className={`text-sm sm:text-base md:text-lg mb-6 md:mb-8 lg:mb-10 max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:mx-0 leading-relaxed ${
                   isLoaded ? "animate-fade-in-left" : "opacity-0"
                 } ${isDarkMode ? "text-gray-300" : "text-slate-600"}`}
                 style={{ animationDelay: "0.5s" }}
@@ -244,7 +186,7 @@ export default function Hero() {
               >
                 <a
                   href="#picture"
-                  className={`group font-medium py-3 px-6 md:px-8 rounded-full transition-all duration-300 hover-lift shadow-lg hover:shadow-xl relative overflow-hidden ${
+                  className={`group font-medium py-2.5 md:py-3 px-5 md:px-6 lg:px-8 rounded-full transition-all duration-300 hover-lift shadow-lg hover:shadow-xl relative overflow-hidden text-sm md:text-base ${
                     isDarkMode
                       ? "bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white"
                       : "bg-gradient-to-r from-slate-900 to-slate-800 hover:from-slate-800 hover:to-slate-700 text-white"
@@ -261,7 +203,7 @@ export default function Hero() {
                 </a>
                 <a
                   href="#contact"
-                  className={`group border font-medium py-3 px-6 md:px-8 rounded-full transition-all duration-300 hover-lift relative overflow-hidden ${
+                  className={`group border font-medium py-2.5 md:py-3 px-5 md:px-6 lg:px-8 rounded-full transition-all duration-300 hover-lift relative overflow-hidden text-sm md:text-base ${
                     isDarkMode
                       ? "border-gray-600 text-gray-300 hover:bg-gray-800 hover:border-gray-500"
                       : "border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400"
@@ -285,16 +227,14 @@ export default function Hero() {
               style={{ animationDelay: "0.4s" }}
             >
               <div className="relative group">
-                {/* Main Image only, no background or box */}
+                {/* Main Image with improved responsive sizing */}
                 <img
                   src="/images/julissa1.png"
                   alt="Julissa Rosas"
-                  className="w-full h-auto mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none"
+                  className="w-full h-auto mx-auto max-w-[320px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[480px] xl:max-w-[520px]"
                   style={{
-                    minHeight: "200px",
+                    minHeight: "320px",
                     minWidth: "200px",
-                    maxWidth: "none",
-                    width: "100%",
                     objectFit: "cover",
                   }}
                 />
