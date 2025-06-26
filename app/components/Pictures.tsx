@@ -90,6 +90,16 @@ export default function Picture() {
       title: "Timeless",
       description: "Moments that transcend time and space",
     },
+    {
+      src: "/images/img17.jpg",
+      title: "Timeless",
+      description: "Moments that transcend time and space",
+    },
+    {
+      src: "/images/img18.jpg",
+      title: "Timeless",
+      description: "Moments that transcend time and space",
+    },
   ];
 
   useEffect(() => {
@@ -154,7 +164,7 @@ export default function Picture() {
                 isDarkMode ? "text-gray-300" : "text-slate-600"
               }`}
             >
-              A creative collection of moments captured through my lens.
+              A collection of moments captured through my lens.
             </p>
           </div>
 

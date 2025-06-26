@@ -11,33 +11,36 @@ export default function Videos() {
   const videos = [
     {
       id: 1,
-      title: "Morning Routine",
-      description: "A glimpse into my daily creative process",
-      platform: "TikTok",
-      views: "125K",
-      duration: "0:45",
+      title: "Drink Transition Trend",
+      description:
+        "A fun TikTok-style transition showing off different drinks.",
+      platform: "Instagram",
       thumbnail: "/images/img1.jpg",
       videoSrc: "/videos/vid1.mp4",
     },
     {
       id: 2,
-      title: "Behind the Scenes",
-      description: "Creating content that connects",
+      title: "Making Iced Coffee",
+      description: "Refreshing drinks for warm days.",
       platform: "Instagram",
-      views: "89K",
-      duration: "1:20",
-      thumbnail: "/images/img1.jpg",
-      videoSrc: "/videos/vid1.mp4",
+      thumbnail: "/images/img2.jpg",
+      videoSrc: "/videos/vid2.mp4",
     },
     {
       id: 3,
-      title: "Travel Vlog",
-      description: "Exploring new places and stories",
-      platform: "YouTube",
-      views: "234K",
-      duration: "3:15",
-      thumbnail: "/images/img1.jpg",
-      videoSrc: "/videos/vid1.mp4",
+      title: "Acai Bowl Creation",
+      description: "How to make a delicious and healthy acai bowl.",
+      platform: "Instagram",
+      thumbnail: "/images/img3.jpg",
+      videoSrc: "/videos/vid3.mp4",
+    },
+    {
+      id: 4,
+      title: "Summer Recap",
+      description: "A quick montage of the best moments from this summer.",
+      platform: "Instagram",
+      thumbnail: "/images/img4.jpg",
+      videoSrc: "/videos/vid4.mp4",
     },
   ];
 
@@ -101,7 +104,7 @@ export default function Videos() {
         </div>
 
         {/* Video Grid with iPhone16 Template */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 justify-items-center">
           {videos.map((video, index) => (
             <div
               key={video.id}
@@ -169,9 +172,6 @@ export default function Videos() {
                           <span className="text-xs font-medium bg-white/20 backdrop-blur-sm px-2 py-1 rounded-full">
                             {video.platform}
                           </span>
-                          <span className="text-xs text-white/80">
-                            {video.duration}
-                          </span>
                         </div>
                         <h3 className="font-semibold text-xs md:text-sm mb-1 text-white">
                           {video.title}
@@ -179,9 +179,6 @@ export default function Videos() {
                         <p className="text-xs text-gray-200 mb-1 md:mb-2">
                           {video.description}
                         </p>
-                        <div className="flex items-center text-xs text-white/80">
-                          <span>👁️ {video.views} views</span>
-                        </div>
                       </div>
                     </div>
                   </div>

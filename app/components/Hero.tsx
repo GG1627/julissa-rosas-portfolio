@@ -67,8 +67,8 @@ export default function Hero() {
 
       {/* Main Content */}
       <div className="relative z-10 flex-1 flex items-center py-8 md:py-0">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-6 md:gap-12 lg:gap-16 items-center">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
             {/* Left Column - Enhanced Text Content */}
             <div
               className={`text-center lg:text-left ${
@@ -240,35 +240,6 @@ export default function Hero() {
                 />
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Enhanced scroll indicator */}
-      <div
-        className={`absolute bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 hidden md:block ${
-          isLoaded ? "animate-fade-in-up" : "opacity-0"
-        }`}
-        style={{ animationDelay: "1.1s" }}
-      >
-        <div
-          className={`flex flex-col items-center group cursor-pointer ${
-            isDarkMode ? "text-gray-400" : "text-slate-400"
-          }`}
-        >
-          <span className="text-xs mb-2 group-hover:text-slate-600 transition-colors duration-300">
-            Scroll to explore
-          </span>
-          <div
-            className={`w-5 h-8 border rounded-full flex justify-center group-hover:border-slate-400 transition-colors duration-300 ${
-              isDarkMode ? "border-gray-600" : "border-slate-300"
-            }`}
-          >
-            <div
-              className={`w-1 h-2 rounded-full mt-1 animate-bounce group-hover:bg-slate-500 transition-colors duration-300 ${
-                isDarkMode ? "bg-gray-400" : "bg-slate-400"
-              }`}
-            ></div>
           </div>
         </div>
       </div>
