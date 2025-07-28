@@ -199,9 +199,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <p className="text-xs text-center text-gray-400 mt-8 mb-2">
-        © {new Date().getFullYear()} Julissa Rosas. All rights reserved.
-      </p>
     </section>
   );
 }
