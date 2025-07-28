@@ -82,7 +82,7 @@ export default function Hero() {
                 } ${isDarkMode ? "text-gray-400" : "text-slate-500"}`}
                 style={{ animationDelay: "0.1s" }}
               >
-                Hey there! I'm
+                Hey there! I&apos;m
               </div>
 
               {/* Name with enhanced styling */}
