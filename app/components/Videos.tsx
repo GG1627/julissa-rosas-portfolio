@@ -118,16 +118,16 @@ export default function Videos() {
                 {/* iPhone16 Image as Main Container with Higher Z-Index */}
                 <div className="absolute inset-0 z-20">
                   <img
-                    src="/images/iPhone16.png"
+                    src="/images/phone.png"
                     alt="iPhone 16"
                     className="w-full h-full object-contain"
                   />
                 </div>
 
                 {/* Video Content Behind iPhone (Lower Z-Index) */}
-                <div className="absolute inset-0 z-10 flex items-center justify-center">
+                <div className="absolute inset-0 z-50 flex items-center justify-center">
                   {/* Video Screen Area - positioned to match iPhone screen */}
-                  <div className="relative w-56 sm:w-64 md:w-72 h-[500px] sm:h-[550px] md:h-[630px] rounded-[2rem] md:rounded-[3rem] overflow-hidden bg-black">
+                  <div className="relative w-51 sm:w-56 md:w-64 h-[450px] sm:h-[480px] md:h-[560px] rounded-[2rem] md:rounded-[3rem] overflow-hidden bg-black">
                     {/* Video Content */}
                     <div className="relative w-full h-full bg-black flex items-center justify-center">
                       {/* Show video only on client side to prevent hydration issues */}

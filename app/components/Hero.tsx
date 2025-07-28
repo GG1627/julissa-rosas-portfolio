@@ -67,8 +67,8 @@ export default function Hero() {
 
       {/* Main Content */}
       <div className="relative z-10 flex-1 flex items-center py-8 md:py-0">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center -mt-6 md:mt-0">
             {/* Left Column - Enhanced Text Content */}
             <div
               className={`text-center lg:text-left ${
@@ -82,7 +82,7 @@ export default function Hero() {
                 } ${isDarkMode ? "text-gray-400" : "text-slate-500"}`}
                 style={{ animationDelay: "0.1s" }}
               >
-                Hey there!
+                Hey there! I'm
               </div>
 
               {/* Name with enhanced styling */}
@@ -231,10 +231,8 @@ export default function Hero() {
                 <img
                   src="/images/julissa1.png"
                   alt="Julissa Rosas"
-                  className="w-full h-auto mx-auto max-w-[320px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[480px] xl:max-w-[520px]"
+                  className="w-full h-auto mx-auto max-w-[250px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[480px] xl:max-w-[520px]"
                   style={{
-                    minHeight: "320px",
-                    minWidth: "200px",
                     objectFit: "cover",
                   }}
                 />

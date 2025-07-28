@@ -11,12 +11,12 @@ export default function Picture() {
   // Array of image data with titles and descriptions
   const images = [
     {
-      src: "/images/img1.jpg",
+      src: "/images/img12.jpg",
       title: "Nature's Beauty",
       description: "Capturing the serene moments in nature",
     },
     {
-      src: "/images/img2.jpg",
+      src: "/images/img17.jpg",
       title: "Urban Life",
       description: "The vibrant energy of city streets",
     },
@@ -36,7 +36,7 @@ export default function Picture() {
       description: "Candid moments of everyday life",
     },
     {
-      src: "/images/img6.jpg",
+      src: "/images/img10.jpg",
       title: "Landscape",
       description: "Breathtaking views and natural wonders",
     },
@@ -46,7 +46,7 @@ export default function Picture() {
       description: "Creative perspectives and unique angles",
     },
     {
-      src: "/images/img8.jpg",
+      src: "/images/img16.jpg",
       title: "Cultural Moments",
       description: "Celebrating diversity and traditions",
     },
@@ -56,7 +56,7 @@ export default function Picture() {
       description: "Simplicity in composition and form",
     },
     {
-      src: "/images/img10.jpg",
+      src: "/images/img2.jpg",
       title: "Color Stories",
       description: "Vibrant palettes and visual harmony",
     },
@@ -66,7 +66,7 @@ export default function Picture() {
       description: "Real stories captured through the lens",
     },
     {
-      src: "/images/img12.jpg",
+      src: "/images/img19.jpg",
       title: "Fine Art",
       description: "Artistic expression through photography",
     },
@@ -86,17 +86,22 @@ export default function Picture() {
       description: "Modern perspectives on life and society",
     },
     {
-      src: "/images/img16.jpg",
+      src: "/images/img8.jpg",
       title: "Timeless",
       description: "Moments that transcend time and space",
     },
     {
-      src: "/images/img17.jpg",
+      src: "/images/img6.jpg",
       title: "Timeless",
       description: "Moments that transcend time and space",
     },
     {
       src: "/images/img18.jpg",
+      title: "Timeless",
+      description: "Moments that transcend time and space",
+    },
+    {
+      src: "/images/img1.jpg",
       title: "Timeless",
       description: "Moments that transcend time and space",
     },

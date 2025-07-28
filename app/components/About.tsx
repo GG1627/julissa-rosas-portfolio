@@ -348,9 +348,9 @@ export default function About() {
                     isDarkMode ? "text-gray-300" : "text-slate-600"
                   }`}
                 >
-                  Oversaw marketing initiatives, coordinated events, and led a
-                  team to promote the organization&apos;s mission and activities
-                  to the student body.
+                  Oversaw marketing initiatives, coordinated events, and
+                  collaborated with a team to promote the organization&apos;s
+                  mission and activities to the student body.
                 </p>
               </div>
             </div>
