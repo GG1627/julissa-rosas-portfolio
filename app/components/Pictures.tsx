@@ -81,6 +81,11 @@ export default function Picture() {
       description: "Capturing the human experience",
     },
     {
+      src: "/images/img20.jpg",
+      title: "Emotional Depth",
+      description: "Capturing the human experience",
+    },
+    {
       src: "/images/img15.jpg",
       title: "Contemporary",
       description: "Modern perspectives on life and society",
