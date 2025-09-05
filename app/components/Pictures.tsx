@@ -36,6 +36,11 @@ export default function Picture() {
       description: "Candid moments of everyday life",
     },
     {
+      src: "/images/img16.jpg",
+      title: "Street Photography",
+      description: "Candid moments of everyday life",
+    },
+    {
       src: "/images/img10.jpg",
       title: "Landscape",
       description: "Breathtaking views and natural wonders",
@@ -46,7 +51,7 @@ export default function Picture() {
       description: "Creative perspectives and unique angles",
     },
     {
-      src: "/images/img16.jpg",
+      src: "/images/img21.jpg",
       title: "Cultural Moments",
       description: "Celebrating diversity and traditions",
     },
@@ -61,17 +66,27 @@ export default function Picture() {
       description: "Vibrant palettes and visual harmony",
     },
     {
+      src: "/images/img22.jpg",
+      title: "Color Stories",
+      description: "Vibrant palettes and visual harmony",
+    },
+    {
       src: "/images/img11.jpg",
       title: "Documentary",
       description: "Real stories captured through the lens",
     },
     {
-      src: "/images/img19.jpg",
+      src: "/images/img15.jpg",
       title: "Fine Art",
       description: "Artistic expression through photography",
     },
     {
       src: "/images/img13.jpg",
+      title: "Travel Diary",
+      description: "Adventures and discoveries around the world",
+    },
+    {
+      src: "/images/img24.jpg",
       title: "Travel Diary",
       description: "Adventures and discoveries around the world",
     },
@@ -86,7 +101,12 @@ export default function Picture() {
       description: "Capturing the human experience",
     },
     {
-      src: "/images/img15.jpg",
+      src: "/images/img23.jpg",
+      title: "Emotional Depth",
+      description: "Capturing the human experience",
+    },
+    {
+      src: "/images/img19.jpg",
       title: "Contemporary",
       description: "Modern perspectives on life and society",
     },
